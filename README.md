@@ -1,4 +1,4 @@
-# Bulk Resume Email Automation (Python)
+# Resume Email Automation (Python)
 
 A Python automation script to send job application emails in bulk with your resume attached.
 The script reads company and HR email details from an Excel file, sends personalized emails,
