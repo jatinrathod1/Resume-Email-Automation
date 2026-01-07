@@ -1,3 +1,4 @@
+
 import os
 import pandas as pd
 import smtplib
@@ -13,7 +14,7 @@ EXCEL_PATH = BASE_DIR / "jobs_list.xlsx"
 RESUME_PATH = BASE_DIR / "resume.pdf"
 
 # Sender email (Gmail recommended)
-SENDER_EMAIL = "jatinrathod@gmail.com"
+SENDER_EMAIL = ""
 
 # https://myaccount.google.com/apppasswords
 # Gmail App Password (do NOT use normal Gmail password)
@@ -252,3 +253,4 @@ def send_bulk_emails():
 
 if __name__ == "__main__":
     send_bulk_emails()
+
