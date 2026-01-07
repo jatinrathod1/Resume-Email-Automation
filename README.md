@@ -1,9 +1,9 @@
 # 📧 Resume Email Automation (Python)
 
-A powerful **Python automation script** jo **bulk job application emails** send karta hai 📤
-Resume attach hota hai 📄, Excel se data read hota hai 📊, aur status auto-track hota hai ✅
+A powerful **Python automation script** designed to send **bulk job application emails** with your resume attached.
+The script reads company and HR details from an Excel file, sends personalized emails, tracks delivery status, and automatically creates backups.
 
-Perfect hai **job hunting automation**, **daily HR reach-out**, aur **time saving** ke liye ⏱️🔥
+This project is ideal for **job seekers**, **automation enthusiasts**, and anyone looking to save time while applying for multiple roles.
 
 ---
 
@@ -12,11 +12,11 @@ Perfect hai **job hunting automation**, **daily HR reach-out**, aur **time savin
 * 📧 Bulk job application email sending
 * 📄 Resume attachment support (PDF)
 * 📊 Excel-based company & HR email management
-* 🧠 Dynamic email subject & body
-* 🛑 **DRY RUN mode** (test without sending emails)
+* 🧠 Dynamic email subject and body generation
+* 🛑 **DRY RUN mode** (test without sending real emails)
 * ✅ Email status tracking (Sent / Error / Skipped)
 * 💾 Automatic Excel backup generation
-* 📁 Portable – runs from current project folder
+* 📁 Portable – runs directly from the project folder
 
 ---
 
@@ -36,29 +36,29 @@ jobs/
 
 ## 📊 Excel File Format (`jobs_list.xlsx`)
 
-### 🔹 Required Columns
+### Required Columns
 
-| Column Name | Required | Description          |
-| ----------- | -------- | -------------------- |
-| CompanyName | ✅ Yes    | Company ka naam      |
-| HR_Email    | ✅ Yes    | HR / Recruiter email |
+| Column Name | Required | Description                   |
+| ----------- | -------- | ----------------------------- |
+| CompanyName | Yes      | Name of the company           |
+| HR_Email    | Yes      | HR or Recruiter email address |
 
-### 🔹 Optional Columns (Auto-Handled)
+### Optional Columns (Handled Automatically)
 
-| Column Name | Required | Description               |
-| ----------- | -------- | ------------------------- |
-| Role        | ❌ No     | Job role                  |
-| Location    | ❌ No     | Job location              |
-| Status      | ❌ No     | Script auto-update karega |
+| Column Name | Required | Description                         |
+| ----------- | -------- | ----------------------------------- |
+| Role        | No       | Job role or position                |
+| Location    | No       | Job location                        |
+| Status      | No       | Automatically updated by the script |
 
 📌 **Note:**
-Agar `Status = Sent` hoga to email dobara nahi jayega 🚫📧
+If the `Status` value is `Sent`, the script will skip that row and will not send the email again.
 
 ---
 
 ## ⚙️ Configuration
 
-`Resume_Automation.py` file me niche diye gaye values update karo:
+Update the following values inside the `Resume_Automation.py` file:
 
 ```python
 SENDER_EMAIL = "your_email@gmail.com"
@@ -68,27 +68,27 @@ DRY_RUN = False
 MAX_EMAILS_PER_RUN = 150
 ```
 
-⚠️ **Important:** Normal Gmail password use mat karo. Sirf **Gmail App Password** use karo.
+⚠️ **Important:** Do not use your normal Gmail password. Always use a **Gmail App Password**.
 
 ---
 
-## 🔐 How to Generate Gmail App Password
+## 🔐 How to Generate a Gmail App Password
 
-1. Google Account → **Security**
+1. Open your **Google Account** → **Security**
 2. Enable **2-Step Verification**
-3. Open **App Passwords**
+3. Go to **App Passwords**
 4. Select:
 
    * App: Mail
    * Device: Other (Python Script)
-5. Generate password
-6. Script me paste karo ✅
+5. Generate the password
+6. Copy and paste it into the script
 
 ---
 
 ## ▶️ How to Run the Script
 
-Terminal / CMD me project folder open karke run karo:
+Open Terminal / Command Prompt in the project folder and run:
 
 ```bash
 python Resume_Automation.py
@@ -96,47 +96,47 @@ python Resume_Automation.py
 
 ---
 
-## 🧪 DRY RUN Mode (Recommended)
+## 🧪 DRY RUN Mode (Recommended for Testing)
 
-Testing ke liye pehle DRY RUN enable karo:
+Before sending real emails, it is recommended to enable DRY RUN mode:
 
 ```python
 DRY_RUN = True
 ```
 
-📌 Is mode me:
+In this mode:
 
-* Koi real email send nahi hoga ❌
-* Sirf logs print honge 🖨️
-* Excel file safe rahegi 🔒
+* No real emails are sent
+* All actions are logged in the console
+* Your Excel file remains unchanged
 
 ---
 
 ## 📝 Important Notes
 
-* ⚠️ Gmail daily email sending limits apply hoti hai
-* 📤 Recommended: **100–150 emails per day**
-* 📄 Resume **PDF format** me hona chahiye
-* 📁 Excel file aur resume script ke same folder me hone chahiye
+* Gmail daily email sending limits apply
+* Recommended limit: **100–150 emails per day**
+* Resume must be in **PDF format**
+* Excel file, resume, and script must be in the same project folder
 
 ---
 
 ## 👨‍💻 Author
 
 **Jatin Rathod**
-Python Automation Enthusiast 🤖
+Python Automation Enthusiast
 India 🇮🇳
 
 ---
 
 ## ⭐ Future Enhancements
 
-* `.env` file support
+* Environment variable support (`.env`)
 * HTML email templates
 * Command-line arguments
-* Task Scheduler / Cron support
+* Task Scheduler / Cron integration
 * LinkedIn job automation integration
 
 ---
 
-🚀 **Happy Automating & Best of Luck for Your Job Search!**
+🚀 **Happy Automating and Best of Luck with Your Job Search!**
